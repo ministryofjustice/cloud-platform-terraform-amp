@@ -1,4 +1,5 @@
 module "test_prometheus" {
-  source = "../"
+  source    = "../"
   amp_alias = "test-prometheus"
+  team_name = "test-team"
 }
