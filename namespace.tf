@@ -1,6 +1,6 @@
 resource "kubernetes_namespace" "monitoring" {
   metadata {
-    name = "monitoring"
+    name = var.namespace
 
     labels = {
       "component" = "monitoring"

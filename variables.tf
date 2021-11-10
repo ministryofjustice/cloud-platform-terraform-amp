@@ -4,4 +4,20 @@ variable "amp_alias" {
 }
 
 variable "team_name" {
+  type = string
+}
+
+variable "namespace" {
+  type    = string
+  default = "monitoring"
+}
+
+variable "irsa_prometheus_sa_name" {
+  type    = string
+  default = "prometheus-server"
+}
+
+variable "oidc_provider_url" {
+  description = "https://oidc.eks.eu-west-2./etc/etc"
+  type        = string
 }
