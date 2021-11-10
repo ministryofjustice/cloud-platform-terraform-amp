@@ -13,6 +13,6 @@ provider "aws" {
 }
 
 resource "aws_prometheus_workspace" "amp" {
-  provider = aws.london
+  provider = aws.ireland
   alias = var.amp_alias
 }
