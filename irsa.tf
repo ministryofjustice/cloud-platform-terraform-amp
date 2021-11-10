@@ -15,7 +15,7 @@ module "irsa_prometheus" {
   version                       = "4.7.0"
   role_name                     = "${var.amp_alias}-prometheus-irsa"
   provider_url                  = var.oidc_provider_url
-  role_policy_arns              = aws_iam_policy.irsa_prometheus_policy.arn
+  role_policy_arns              = [aws_iam_policy.irsa_prometheus_policy.arn]
   oidc_fully_qualified_subjects = ["system:serviceaccount:${var.namespace}:${var.irsa_prometheus_sa_name}"]
 }
 
