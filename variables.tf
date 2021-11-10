@@ -21,3 +21,7 @@ variable "oidc_provider_url" {
   description = "https://oidc.eks.eu-west-2./etc/etc"
   type        = string
 }
+
+variable "cluster_domain_name" {
+  description = "The cluster domain - used by ingresses"
+}
