@@ -11,8 +11,3 @@ provider "aws" {
   region  = "eu-west-2"
   alias   = "london"
 }
-
-resource "aws_prometheus_workspace" "amp" {
-  provider = aws.ireland
-  alias = var.amp_alias
-}
