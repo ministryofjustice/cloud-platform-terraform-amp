@@ -30,7 +30,7 @@ resource "kubernetes_service_account" "irsa_prometheus_sa" {
     name      = var.irsa_prometheus_sa_name
     namespace = var.namespace
     annotations = {
-      "eks.amazonaws.com/role-arn" = module.irsa_prometheus.this_iam_role_arn
+      "eks.amazonaws.com/role-arn" = module.irsa_prometheus.iam_role_arn
     }
   }
   automount_service_account_token = true
