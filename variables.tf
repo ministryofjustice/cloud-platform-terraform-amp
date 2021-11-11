@@ -4,7 +4,8 @@ variable "amp_alias" {
 }
 
 variable "team_name" {
-  type = string
+  type    = string
+  default = "webops"
 }
 
 variable "namespace" {
