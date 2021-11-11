@@ -4,27 +4,15 @@ resource "aws_prometheus_alert_manager_definition" "alertmanager" {
   definition   = <<EOF
 alertmanager_config: |
   route:
-    receiver: 'slack'
+    receiver: 'sns-demo'
   receivers:
-    - name: 'slack'
-      slack_configs:
-      - api_url: "$${webhook}"
-        channel: "$${channel}"
-        send_resolved: True
-        title: '{{ template "slack.cp.title" . }}'
-        text: '{{ template "slack.cp.text" . }}'
-        actions:
-        - type: button
-          text: 'Runbook :blue_book:'
-          url: '{{ (index .Alerts 0).Annotations.runbook_url }}'
-        - type: button
-          text: 'Query :mag:'
-          url: '{{ (index .Alerts 0).GeneratorURL }}'
-        - type: button
-          text: 'Dashboard :chart_with_upwards_trend:'
-          url: '{{ (index .Alerts 0).Annotations.dashboard_url }}'
-        - type: button
-          text: 'Silence :no_bell:'
-          url: '{{ template "__alert_silence_link" . }}'
+    - name: 'sns-demo'
+      sns_configs:
+      - topic_arn: ${ module.prometheus_sns_topic.topic_arn }
+        sigv4:
+          region: eu-west-1
+        attributes:
+          key: severity
+          value: warning
 EOF
 }
