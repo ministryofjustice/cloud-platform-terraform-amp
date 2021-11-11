@@ -26,3 +26,8 @@ variable "oidc_provider_url" {
 variable "cluster_domain_name" {
   description = "The cluster domain - used by ingresses"
 }
+
+variable "alertmanager_slack_receivers" {
+  description = "A list of configuration values for Slack receivers"
+  type        = list(any)
+}
