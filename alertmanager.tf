@@ -1,4 +1,5 @@
 resource "aws_prometheus_alert_manager_definition" "alertmanager" {
+  provider = aws.ireland
   workspace_id = aws_prometheus_workspace.amp.id
   definition   = <<EOF
 alertmanager_config: |
