@@ -6,8 +6,9 @@ This Terraform module generates an AWS-managed Prometheus instance for a Cloud P
 
 See [example](example/) dir
 
-<!-- BEGIN_TF_DOCS -->
-<!-- END_TF_DOCS -->
+<!--- BEGIN_TF_DOCS --->
+
+<!--- END_TF_DOCS --->
 
 ## Reading Material
 
