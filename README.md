@@ -54,7 +54,7 @@ See [example](example/) dir
 | <a name="input_irsa_prometheus_sa_name"></a> [irsa\_prometheus\_sa\_name](#input\_irsa\_prometheus\_sa\_name) | n/a | `string` | `"prometheus-server"` | no |
 | <a name="input_namespace"></a> [namespace](#input\_namespace) | n/a | `string` | `"monitoring"` | no |
 | <a name="input_oidc_provider_url"></a> [oidc\_provider\_url](#input\_oidc\_provider\_url) | https://oidc.eks.eu-west-2./etc/etc | `string` | n/a | yes |
-| <a name="input_team_name"></a> [team\_name](#input\_team\_name) | n/a | `string` | n/a | yes |
+| <a name="input_team_name"></a> [team\_name](#input\_team\_name) | n/a | `string` | `"webops"` | no |
 
 ## Outputs
 
