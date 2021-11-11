@@ -33,6 +33,7 @@ See [example](example/) dir
 | Name | Type |
 |------|------|
 | [aws_iam_policy.irsa_prometheus_policy](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_policy) | resource |
+| [aws_prometheus_alert_manager_definition.alertmanager](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/prometheus_alert_manager_definition) | resource |
 | [aws_prometheus_workspace.amp](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/prometheus_workspace) | resource |
 | [helm_release.prometheus](https://registry.terraform.io/providers/hashicorp/helm/latest/docs/resources/release) | resource |
 | [kubernetes_limit_range.monitoring](https://registry.terraform.io/providers/hashicorp/kubernetes/latest/docs/resources/limit_range) | resource |
@@ -49,6 +50,7 @@ See [example](example/) dir
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
+| <a name="input_alertmanager_slack_receivers"></a> [alertmanager\_slack\_receivers](#input\_alertmanager\_slack\_receivers) | A list of configuration values for Slack receivers | `list(any)` | n/a | yes |
 | <a name="input_amp_alias"></a> [amp\_alias](#input\_amp\_alias) | User-friendly name for the workspace | `string` | n/a | yes |
 | <a name="input_cluster_domain_name"></a> [cluster\_domain\_name](#input\_cluster\_domain\_name) | The cluster domain - used by ingresses | `any` | n/a | yes |
 | <a name="input_irsa_prometheus_sa_name"></a> [irsa\_prometheus\_sa\_name](#input\_irsa\_prometheus\_sa\_name) | n/a | `string` | `"prometheus-server"` | no |
