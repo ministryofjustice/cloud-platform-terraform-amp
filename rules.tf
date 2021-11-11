@@ -1,4 +1,5 @@
 resource "aws_prometheus_rule_group_namespace" "self_check" {
+  provider     = aws.ireland
   name         = "self-check"
   workspace_id = aws_prometheus_workspace.amp.id
   data         = <<EOF

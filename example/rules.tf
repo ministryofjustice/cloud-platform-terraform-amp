@@ -1,4 +1,5 @@
 resource "aws_prometheus_rule_group_namespace" "raz_demo" {
+  provider     = aws.ireland
   name         = "raz-demo"
   workspace_id = module.test_prometheus.amp_id
   data         = <<EOF
