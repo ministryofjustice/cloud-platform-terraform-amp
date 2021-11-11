@@ -1,5 +1,5 @@
-resource "aws_prometheus_rule_group_namespace" "demo" {
-  name         = "demo-rules"
+resource "aws_prometheus_rule_group_namespace" "raz_demo" {
+  name         = "raz-demo"
   workspace_id = module.test_prometheus.amp_id
   data         = <<EOF
 groups:
