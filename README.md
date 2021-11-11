@@ -1,6 +1,6 @@
 # cloud-platform-terraform-amp
 
-This Terraform module generates an AWS-managed Prometheus instance for a Cloud Platform cluster
+This Terraform module generates an AWS-managed Prometheus instance for a Cloud Platform cluster.
 
 ## Usage
 
