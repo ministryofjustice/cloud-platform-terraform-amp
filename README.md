@@ -27,6 +27,7 @@ See [example](example/) dir
 | Name | Source | Version |
 |------|--------|---------|
 | <a name="module_irsa_prometheus"></a> [irsa\_prometheus](#module\_irsa\_prometheus) | terraform-aws-modules/iam/aws//modules/iam-assumable-role-with-oidc | 4.7.0 |
+| <a name="module_prometheus_sns_topic"></a> [prometheus\_sns\_topic](#module\_prometheus\_sns\_topic) | github.com/ministryofjustice/cloud-platform-terraform-sns-topic | 4.3 |
 
 ## Resources
 
