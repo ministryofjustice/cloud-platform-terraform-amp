@@ -63,6 +63,7 @@ See [example](example/) dir
 | Name | Description |
 |------|-------------|
 | <a name="output_amp_endpoint"></a> [amp\_endpoint](#output\_amp\_endpoint) | n/a |
+| <a name="output_amp_id"></a> [amp\_id](#output\_amp\_id) | n/a |
 
 <!--- END_TF_DOCS --->
 
