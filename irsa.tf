@@ -1,11 +1,11 @@
 data "aws_iam_policy_document" "irsa_prometheus_document" {
   statement {
     actions = [
-      "aps:*",
+      "aps:*"
     ]
 
     resources = [
-      "${aws_prometheus_workspace.amp.arn}",
+      aws_prometheus_workspace.amp.arn
     ]
   }
 }
