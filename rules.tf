@@ -1,6 +1,6 @@
 resource "aws_prometheus_rule_group_namespace" "self_check" {
   name         = "self-check"
-  workspace_id = module.test_prometheus.amp_id
+  workspace_id = aws_prometheus_workspace.amp.id
   data         = <<EOF
 groups:
   - name: prometheus
