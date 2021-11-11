@@ -13,6 +13,7 @@ data "aws_iam_policy_document" "irsa_prometheus_document" {
 module "irsa_prometheus" {
   source                        = "terraform-aws-modules/iam/aws//modules/iam-assumable-role-with-oidc"
   version                       = "4.7.0"
+  create_role                   = true
   role_name                     = "${var.amp_alias}-prometheus-irsa"
   provider_url                  = var.oidc_provider_url
   role_policy_arns              = [aws_iam_policy.irsa_prometheus_policy.arn]
