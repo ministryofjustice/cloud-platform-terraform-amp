@@ -6,8 +6,9 @@ resource "helm_release" "grafana" {
   version    = "6.17.5"
 
   values = [templatefile("${path.module}/templates/grafana-values.yaml.tpl", {
-    grafana_ingress     = local.grafana_ingress
-    grafana_root        = local.grafana_root
+    grafana_ingress = local.grafana_ingress
+    grafana_root    = local.grafana_root
+    clusterName     = terraform.workspace
   })]
 
   depends_on = [kubernetes_service_account.irsa_prometheus_sa]
