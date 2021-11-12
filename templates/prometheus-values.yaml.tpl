@@ -2,6 +2,8 @@ serviceAccounts:
   server:
     create: false
     name: prometheus-server
+alertmanager:
+  enabled: false
 server:
   remoteWrite:
     - url: "${ prometheus_endpoint }"

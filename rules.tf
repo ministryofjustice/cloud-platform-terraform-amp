@@ -15,8 +15,8 @@ groups:
       expr: |-
         # Without max_over_time, failed scrapes could create false negatives, see
         # https://www.robustperception.io/alerting-on-gauges-in-prometheus-2-0 for details.
-        max_over_time(prometheus_config_last_reload_successful{job="prometheus-server",namespace="${var.namespace}"}[5m]) == 0
-      for: 10m
+        max_over_time(prometheus_config_last_reload_successful{job="prometheus-server",namespace="${var.namespace}"}[1m]) == 0
+      for: 2m
       labels:
         severity: critical
 EOF
