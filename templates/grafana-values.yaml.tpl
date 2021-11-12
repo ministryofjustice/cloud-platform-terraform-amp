@@ -21,5 +21,5 @@ env:
   GF_SERVER_ROOT_URL: "${ grafana_root }"
   GF_ANALYTICS_REPORTING_ENABLED: "false"
   GF_USERS_ALLOW_SIGN_UP: "false"
-  GF_INSTALL_PLUGINS: "camptocamp-prometheus-alertmanager-datasource"
-  GF_PLUGINS_ALLOW_LOADING_UNSIGNED_PLUGINS: "camptocamp-prometheus-alertmanager-datasource"
+  AWS_SDK_LOAD_CONFIG: "true"
+  GF_AUTH_SIGV4_AUTH_ENABLED: "true"
