@@ -1,3 +1,7 @@
+rbac:
+  create: true
+  pspEnabled: false
+  pspUseAppArmor: false
 serviceAccount:
   create: false
   name: prometheus-server
